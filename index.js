@@ -14,7 +14,7 @@ function start(client) {
     console.log('Bot is authenticated and ready!');
     
     // Schedule message to be sent every day at 6 AM
-    cron.schedule('0 6 * * *', async () => {
+    cron.schedule(`${Math.floor(Math.random() * 30)} 6 * * *`, async () => {
         try {
             // Send message
             await client.sendText(`${targetNumber}@c.us`, message);
